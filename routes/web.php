@@ -44,3 +44,31 @@ Route::get("/disable-blade", function () {
 Route::get("/if", function () {
     return view("if", ["hobbies" => ["gaming", "music", "coding"]]);
 });
+
+
+// class
+Route::get("/class", function () {
+    return view("class", [
+        "hobbies" => [
+            [
+                "name" => "Coding",
+                "love" => false
+            ],
+            [
+                "name" => "Gaming",
+                "love" => true
+            ],
+            [
+                "name" => "Music",
+                "love" => false
+            ],
+
+        ]
+    ]);
+});
+
+
+// include
+Route::get("/include", function () {
+    return view("include", ["title" => "Header DirApp"]);
+});
