@@ -109,4 +109,7 @@ Route::get("/stack", function () {
 });
 
 
-
+// Inheritance - Layout
+Route::get("/layout", function () {
+    return view("child");
+});
