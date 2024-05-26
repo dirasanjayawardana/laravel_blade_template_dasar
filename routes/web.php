@@ -72,3 +72,41 @@ Route::get("/class", function () {
 Route::get("/include", function () {
     return view("include", ["title" => "Header DirApp"]);
 });
+
+
+// Each Once
+Route::get("/each-once", function () {
+    return view("each-once", [
+        "users" => [
+            [
+                "name" => "Dira",
+                "hobbies" => ["Coding", "Gaming"]
+            ],
+            [
+                "name" => "Sanjaya",
+                "hobbies" => ["Coding", "Gaming"]
+            ]
+        ]
+    ]);
+});
+
+
+// Form
+Route::get("/form", function () {
+    return view("form", [
+        "user" => [
+            "name" => "Dira",
+            "premium" => true,
+            "admin" => true
+        ]
+    ]);
+});
+
+
+// Stack
+Route::get("/stack", function () {
+    return view("stack");
+});
+
+
+
