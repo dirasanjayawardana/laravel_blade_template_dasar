@@ -37,7 +37,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
 
-        // saat menggunakan {{ $variable }}, secara otomatis blade template akan mengkonversinya menjadi echo($variabel)-->__toString()
+        // saat menggunakan {{ $variable }}, secara otomatis blade template akan mengkonversinya menjadi echo($variabel)->__toString()
         // untuk kasus tertentu, kita tidak ingin mengubahnya, misal ketika datanya berupa object, kita ingin mengubah hasil stringnya
         // bisa menggunakan Blade::stringable(class, function)
         Blade::stringable(Person::class, function (Person $person) {
