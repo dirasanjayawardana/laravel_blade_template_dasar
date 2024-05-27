@@ -4,6 +4,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
+// untuk di production, ada baiknya melakukan proses kompilasi seluruh blade template terlebih dahulu, agar tidak perlu melakukan kompilasi lagi ketika ada request masuk, hasil compile di folder storage/framework/views
+// untuk melakukan compile view atau blade template: php artisan view:cache
+// untuk menghapus seluruh hasil compile: php artisan view:clear
+
+
 // Logic untuk Route sebaiknya disimpan dalam controller
 // jika ada Route yang konflik ada ada route yang sama, maka tidak akan terjadi error, tetapi laravel akan mengeksekusi route yang paling atas
 // untuk melihat semua routing di laravel --> php artisan route:list
